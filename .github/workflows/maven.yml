@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Run Tests
-      run: JACOCO_COVERAGE=true sh ./scripts/run_travis.sh
+      run: JACOCO_COVERAGE=true ./scripts/run_travis.sh
     - name: Code Coverage
       run: bash <(curl -s https://codecov.io/bash)
 
