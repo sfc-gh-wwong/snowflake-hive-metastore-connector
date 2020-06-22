@@ -10,7 +10,7 @@ echo "JDK Version: $TRAVIS_JDK_VERSION"
 # and integration test will be run
 mvn "${PARAMS[@]}" verify --batch-mode
 
-./scripts/run_whitesource.sh 
+./whitesource/run_whitesource.sh 
 
 mvn clean # Cleanup
 
