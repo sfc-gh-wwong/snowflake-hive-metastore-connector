@@ -60,6 +60,7 @@ whitesource/run_whitesource.sh
 
 if [ "$publish" != true ]; then
   echo "[Info] Publish flag not set. Terminating after staging."
+  mvn clean # Clean up
   exit 0
 fi
 
@@ -96,3 +97,6 @@ mvn ${MVN_OPTIONS[@]} \
     -DstagingDescription="Automated Release"
 
 rm $OSSRH_DEPLOY_SETTINGS_XML
+
+mvn clean # Clean up
+
