@@ -41,7 +41,7 @@ fi
 # SCAN_CONFIG="${SCAN_DIRECTORIES}/wss-generated-file.config"
 
 # SCAN_CONFIG is the path to your whitesource configuration file
-SCAN_CONFIG="wss-agent.config"
+SCAN_CONFIG="whitesource/wss-java-maven-agent.config"
 
 if [ "$GIT_BRANCH" != "$PROD_BRANCH" ]; then
     java -jar wss-unified-agent.jar -apiKey ${WHITESOURCE_API_KEY} \
